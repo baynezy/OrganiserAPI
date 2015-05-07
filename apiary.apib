@@ -1,0 +1,44 @@
+FORMAT: 1A
+HOST: http://www.bayn.es
+
+# Task API
+
+
+# Group Tasks
+Notes related resources of the **Tasks API**
+
+## Tasks Collection [/tasks]
+Operations for dealing with collections of Tasks
+### List all Tasks [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": "afaaga", "title": "Buy milk", "description": "Full fat"
+        }, {
+          "id": "lkjhsgd", "title": "Call bank manager", "description": "NatWest"
+        }]
+
+### Create a Note [POST]
++ Request (application/json)
+
+        { "title": "Buy milk", "description": "Full fat" }
+
++ Response 201 (application/json)
+
+        { "id": "lkjsfsfa", "title": "Buy milk", "description": "Full fat" }
+
+## Tasks [/tasks/{id}]
+A single Task object with all its details
+
++ Parameters
+    + id (required, string, `lhlhds`) ... String `id` of the Task to perform action with.
+
+### Retrieve a Task [GET]
++ Response 200 (application/json)
+
+    + Body
+
+            { "id": "ysgsskk", "title": "Buy milk", "description": "Full fat" }
+
+### Remove a Task [DELETE]
++ Response 204
