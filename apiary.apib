@@ -9,7 +9,13 @@ Notes related resources of the **Tasks API**
 
 ## Tasks Collection [/tasks]
 Operations for dealing with collections of Tasks
+
 ### List all Tasks [GET]
++ Request
+    + Headers
+
+            Accept: application/json
+
 + Response 200 (application/json)
 
         [{
@@ -20,12 +26,21 @@ Operations for dealing with collections of Tasks
 
 ### Create a Task [POST]
 + Request (application/json)
+    + Headers
 
-        { "title": "Buy milk", "description": "Full fat" }
+            Accept: application/json
+    
+    + Body
+
+            { "title": "Buy milk", "description": "Full fat" }
 
 + Response 201 (application/json)
-
-        { "id": "lkjsfsfa", "title": "Buy milk", "description": "Full fat" }
+    + Headers
+    
+            Location: /tasks/gsdgshs
+    + Body
+    
+            { "id": "lkjsfsfa", "title": "Buy milk", "description": "Full fat" }
 
 ## Tasks [/tasks/{id}]
 A single Task object with all its details
@@ -38,7 +53,7 @@ A single Task object with all its details
 
     + Body
 
-            { "id": "ysgsskk", "title": "Buy milk", "description": "Full fat" }
+            { "id": "lhlhds", "title": "Buy milk", "description": "Full fat" }
 
 ### Remove a Task [DELETE]
 + Response 204
