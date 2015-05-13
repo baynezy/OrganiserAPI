@@ -46,13 +46,30 @@ Operations for dealing with collections of Tasks
 A single Task object with all its details
 
 + Parameters
-    + id (required, string, `lhlhds`) ... String `id` of the Task to perform action with.
+    + id (required, string, `lhlhds`) ... `id` of the Task we are performing the action on.
 
 ### Retrieve a Task [GET]
 + Response 200 (application/json)
 
     + Body
 
+            { "id": "lhlhds", "title": "Buy milk", "description": "Full fat" }
+
+### Update a Task [PUT]
++ Request (application/json)
+
+    + Headers
+    
+            Accept: application/json
+
+    + Body
+    
+            { "id": "lhlhds", "title": "Buy milk", "description": "Full fat" }
+
++ Response 200 (application/json)
+
+    + Body
+    
             { "id": "lhlhds", "title": "Buy milk", "description": "Full fat" }
 
 ### Remove a Task [DELETE]
