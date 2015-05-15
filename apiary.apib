@@ -94,6 +94,17 @@ A single Task object with all its details
     + Body
     
             { "id": "lhlhds", "title": "Buy milk", "description": "Full fat" }
+            
++ Response 404 (application/json)
+
+        {
+            "code": "ERR404",
+            "detail": {
+                "summary": "No such task",
+                "extended": []
+            }
+        }
+        
 
 ### Remove a Task [DELETE]
 + Response 204
