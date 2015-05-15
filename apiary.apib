@@ -65,6 +65,18 @@ A single Task object with all its details
     + Body
 
             { "id": "lhlhds", "title": "Buy milk", "description": "Full fat" }
+            
++ Response 404 (application/json)
+
+        {
+            "code": "ERR404",
+            "detail": {
+                "summary": "No such task",
+                "extended": []
+            }
+        }
+        
+            
 
 ### Update a Task [PUT]
 + Request (application/json)
