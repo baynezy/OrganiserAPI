@@ -117,3 +117,13 @@ A single Task object with all its details
 
 ### Remove a Task [DELETE]
 + Response 204
+
++ Response 404 (application/json)
+
+        {
+            "code": "ERR404",
+            "detail": {
+                "summary": "No such task",
+                "extended": []
+            }
+        }
