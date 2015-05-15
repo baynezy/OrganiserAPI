@@ -38,9 +38,20 @@ Operations for dealing with collections of Tasks
     + Headers
     
             Location: /tasks/gsdgshs
+    
     + Body
     
             { "id": "lkjsfsfa", "title": "Buy milk", "description": "Full fat" }
+
++ Response 400 (application/json)
+
+        {
+            "code": "ERR400",
+            "detail": {
+                "summary": "Payload Invalid",
+                "extended": []
+            }
+        }
 
 ## Tasks [/tasks/{id}]
 A single Task object with all its details
